@@ -138,7 +138,7 @@ def main():
 
         df = generate_locale_profile(number_to_gen, locale)
         st.dataframe(df)
-        with st.beta_expander("📩: Download"):
+        with st.expander("📩: Download"):
             make_downloadable_df_format(df, dataformat)
 
     elif choice == "Customize":
@@ -167,10 +167,10 @@ def main():
 
         st.dataframe(df)
 
-        with st.beta_expander("🔍: View JSON "):
+        with st.expander("🔍: View JSON "):
             st.json(data)
 
-        with st.beta_expander("📩: Download"):
+        with st.expander("📩: Download"):
             make_downloadable_df_format(df, dataformat)
 
     else:
